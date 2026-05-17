@@ -210,7 +210,7 @@ function Index() {
       <nav className="site-nav">
         <div className="logo">
           <a href="#hero" style={{ textDecoration: 'none', color: 'inherit' }}>
-            Asnar<span>.</span>
+            Ansar<span>.</span>
           </a>
         </div>
         <ul className="nav-links">
@@ -234,7 +234,7 @@ function Index() {
               <div className="badge-dot"></div>Open to work
             </div>
             <h1 className="hero-name">
-              <span className="name-line">Asnar</span>
+              <span className="name-line">Ansar</span>
               <em className="name-line">Abbas</em>
             </h1>
             <p className="hero-tagline">
@@ -265,7 +265,7 @@ function Index() {
             </div>
           </div>
           <div className="hero-photo">
-            <img src={portrait} alt="Portrait of Asnar Abbas" />
+            <img src={portrait} alt="Portrait of Ansar Abbas" />
           </div>
         </div>
       </section>
@@ -399,7 +399,7 @@ function Index() {
           <div className="contact-wrap">
             <h2>Ready to build something great?</h2>
             <p>Website, automation, or digital marketing — let's talk and make it happen.</p>
-            <a href="mailto:asnarabbas@email.com" className="contact-email">asnarabbas@email.com</a>
+            <a href="mailto:ansarabbas@email.com" className="contact-email">ansarabbas@email.com</a>
             <form className="contact-form" onSubmit={handleContactSubmit} noValidate>
               <div className="field">
                 <input
@@ -465,7 +465,7 @@ function Index() {
       </section>
 
       <footer>
-        <span>© 2025 Asnar Abbas</span>
+        <span>© 2025 Ansar Abbas</span>
         <span>MSCS · Web Dev · Digital Marketing · Automation</span>
       </footer>
     </div>
