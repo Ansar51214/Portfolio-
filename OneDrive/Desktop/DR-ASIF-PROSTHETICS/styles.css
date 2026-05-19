@@ -1,0 +1,19 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#0b5ed7;--muted:#6b7280}
+html,body{height:100%}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#f8fafc 0%, #f1f5f9 100%);color:#0f1724}
+.hero-image{min-height:340px}
+.overlay-card{position:absolute;left:20px;top:20px;background:#fff;padding:10px;border-radius:12px;min-width:140px}
+.overlay-thumb{position:absolute;right:18px;top:18px;width:110px}
+.overlay-thumb img{width:100%}
+.avatar{width:40px;height:40px;border-radius:50%;border:2px solid #fff;margin-left:-10px}
+.badge{font-weight:600}
+.card{border:none}
+.card .card-img-top{height:160px;object-fit:cover}
+.rounded-4{border-radius:16px}
+.italics{font-style:italic}
+
+@media (max-width:767px){
+	.overlay-card{left:12px;top:12px}
+	.overlay-thumb{right:12px;top:12px;width:92px}
+}

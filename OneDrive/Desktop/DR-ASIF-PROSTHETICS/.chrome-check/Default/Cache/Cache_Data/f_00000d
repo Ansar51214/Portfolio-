@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Falah Artificial Limbs Center - Dr. Asif Ali</title>
+    <meta name="description" content="Al-Falah Artificial Limbs Center by Dr. Asif Ali. Prosthetics, orthotics, rehabilitation, and patient-focused mobility care in Muzaffargarh.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ======================== 
+           DESIGN SYSTEM & VARIABLES
+           ======================== */
+        :root {
+            --primary-navy: #0a1628;
+            --primary-navy-light: #16263e;
+            --accent-gold: #c9a84c;
+            --accent-gold-hover: #e0be60;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ======================== 
+           GLOBAL STYLES
+           ======================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        #about,
+        #services,
+        #technology,
+        #testimonials,
+        #faq,
+        #appointment,
+        #contact {
+            scroll-margin-top: 88px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary-navy);
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ======================== 
+           BUTTONS & UTILITIES
+           ======================== */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: var(--primary-navy) !important;
+            border: 1px solid var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--accent-gold-hover);
+            border-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(201, 168, 76, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .eyebrow {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ======================== 
+           1. NAVBAR
+           ======================== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--bg-white);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+            margin-left: 5px;
+        }
+
+        .site-logo {
+            font-family: 'DM Sans', sans-serif;
+            gap: 0.75rem;
+        }
+
+        .site-logo span {
+            margin-left: 0;
+        }
+
+        .logo-mark {
+            position: relative;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            color: var(--bg-white);
+        }
+
+        .logo-mark::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ef3340;
+            top: 3px;
+            right: 10px;
+        }
+
+        .logo-mark::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 36px;
+            border-left: 6px solid #ef3340;
+            border-radius: 50%;
+            left: 9px;
+            top: 17px;
+            transform: rotate(28deg);
+        }
+
+        .logo-mark i {
+            position: relative;
+            z-index: 1;
+            font-size: 2.15rem;
+            transform: rotate(-18deg);
+        }
+
+        .logo-copy {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .site-logo .logo-name {
+            color: var(--bg-white);
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .site-logo .logo-subtitle {
+            color: var(--bg-white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            margin-top: 0.45rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--bg-white);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+        }
+
+        /* ======================== 
+           2. HERO SECTION
+           ======================== */
+        #home {
+            background:
+                radial-gradient(circle at 72% 38%, rgba(31, 78, 122, 0.32), rgba(10,22,40,0) 33%),
+                linear-gradient(135deg, #021426 0%, #062140 48%, #031326 100%);
+            min-height: 100vh;
+            display: block;
+            padding: 8.5rem 0 1.8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home .container {
+            max-width: 1440px;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(2,20,38,0.92) 0%, rgba(2,20,38,0.82) 45%, rgba(2,20,38,0.26) 70%, rgba(2,20,38,0.1) 100%),
+                radial-gradient(circle at 8% 80%, rgba(201,168,76,0.1), transparent 22%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: minmax(610px, 0.95fr) minmax(660px, 1.05fr);
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero-text .eyebrow {
+            color: var(--accent-gold);
+            font-size: 1.05rem;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 {
+            color: var(--bg-white);
+            font-size: clamp(3.6rem, 5.35vw, 5rem);
+            margin-bottom: 1.8rem;
+            line-height: 1.05;
+            letter-spacing: 0;
+        }
+
+        .hero-text h1 i {
+            color: var(--accent-gold);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-text p {
+            color: #cbd5e1;
+            font-size: 1.12rem;
+            margin-bottom: 2.2rem;
+            max-width: 560px;
+            line-height: 1.75;
+            position: relative;
+            padding-top: 1.65rem;
+        }
+
+        .hero-text p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 78px;
+            height: 3px;
+            background: var(--accent-gold);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            min-width: 210px;
+            padding: 1.05rem 1.6rem;
+        }
+
+        .hero-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(92px, 1fr));
+            gap: 1.35rem;
+            margin-top: 1.8rem;
+            max-width: 590px;
+        }
+
+        .hero-feature {
+            color: var(--bg-white);
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 1.35;
+        }
+
+        .hero-feature i {
+            width: 78px;
+            height: 78px;
+            margin: 0 auto 0.7rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(23, 63, 109, 0.58);
+            border: 1px solid rgba(255,255,255,0.06);
+            color: var(--bg-white);
+            font-size: 2rem;
+            box-shadow: inset 0 0 25px rgba(255,255,255,0.04);
+        }
+
+        .hero-image {
+            position: relative;
+            min-height: 650px;
+            align-self: stretch;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            margin-right: -2rem;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            left: 2.5rem;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(255,255,255,0.42);
+            transform: skewX(-18deg);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: min(74vh, 760px);
+            min-height: 640px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 18px 0 0 8px;
+            clip-path: polygon(14% 0, 100% 0, 100% 100%, 13% 100%, 0 58%);
+            box-shadow: -28px 30px 70px rgba(0,0,0,0.32);
+            display: block;
+        }
+
+        .hero-trust-panel {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 0;
+            background: rgba(9, 35, 65, 0.92);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.22);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 1.45rem 1.8rem;
+            color: var(--bg-white);
+        }
+
+        .hero-trust-item + .hero-trust-item {
+            border-left: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .hero-trust-item i {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.55);
+            display: grid;
+            place-items: center;
+            font-size: 1.55rem;
+            color: var(--accent-gold);
+        }
+
+        .hero-trust-item h5 {
+            color: var(--bg-white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero-trust-item p {
+            color: #cbd5e1;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* ======================== 
+           3. TRUST BAR
+           ======================== */
+        .trust-bar {
+            background-color: var(--bg-white);
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .trust-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .trust-badge i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+        }
+
+        .trust-badge span {
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 1.1rem;
+        }
+
+        /* ======================== 
+           4. ABOUT SECTION
+           ======================== */
+        #about {
+            padding: 8rem 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            perspective: 1200px;
+        }
+
+        .doctor-portrait-3d {
+            --portrait-offset: 1.25rem;
+            position: relative;
+            isolation: isolate;
+            max-width: 520px;
+            margin: 0 auto;
+            padding: var(--portrait-offset);
+            transform-style: preserve-3d;
+            transform: rotateY(-7deg) rotateX(3deg);
+            transition: var(--transition);
+        }
+
+        .doctor-portrait-3d:hover {
+            transform: rotateY(-3deg) rotateX(1deg) translateY(-8px);
+        }
+
+        .doctor-portrait-3d::before,
+        .doctor-portrait-3d::after {
+            content: '';
+            position: absolute;
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .doctor-portrait-3d::before {
+            inset: 0.55rem 0.1rem 1.9rem 2.15rem;
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-light));
+            box-shadow: 0 28px 65px rgba(10, 22, 40, 0.24);
+            transform: translateZ(-42px);
+        }
+
+        .doctor-portrait-3d::after {
+            inset: 2.15rem 2.15rem 0.1rem 0.1rem;
+            border: 2px solid var(--accent-gold);
+            transform: translateZ(-20px);
+        }
+
+        .doctor-portrait-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: var(--bg-white);
+            box-shadow: 0 30px 70px rgba(10, 22, 40, 0.2);
+        }
+
+        .doctor-portrait-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.72);
+            pointer-events: none;
+        }
+
+        .doctor-portrait-frame img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .doctor-portrait-caption {
+            position: absolute;
+            left: var(--portrait-offset);
+            right: var(--portrait-offset);
+            bottom: var(--portrait-offset);
+            z-index: 2;
+            padding: 1.2rem 1.35rem;
+            color: var(--bg-white);
+            background: linear-gradient(180deg, rgba(10,22,40,0) 0%, rgba(10,22,40,0.92) 100%);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .doctor-portrait-caption strong {
+            display: block;
+            font-size: 1.15rem;
+            letter-spacing: 0.3px;
+        }
+
+        .doctor-portrait-caption span {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 700;
+        }
+
+        .doctor-portrait-badge {
+            position: absolute;
+            right: -0.35rem;
+            top: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            background: var(--bg-white);
+            box-shadow: 0 16px 35px rgba(10, 22, 40, 0.16);
+            color: var(--primary-navy);
+            font-weight: 700;
+            transform: translateZ(38px);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .doctor-portrait-badge i {
+            color: var(--accent-gold);
+            font-size: 1.15rem;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .qual-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .qual-item i {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            margin-top: 0.2rem;
+        }
+
+        .qual-item h5 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            color: var(--primary-navy);
+        }
+
+        .qual-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* ======================== 
+           5. SERVICES SECTION
+           ======================== */
+        #services {
+            padding: 8rem 0;
+            background-color: var(--bg-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-bottom: 3px solid var(--accent-gold);
+            background: var(--bg-white);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(201, 168, 76, 0.1);
+            color: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--accent-gold);
+            color: var(--bg-white);
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .service-link {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* ======================== 
+           6. TECHNOLOGY SECTION
+           ======================== */
+        #technology {
+            padding: 8rem 0;
+            background-color: var(--primary-navy);
+            color: var(--bg-white);
+        }
+
+        #technology h2, #technology .section-header p {
+            color: var(--bg-white);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .tech-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .tech-features {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .tech-feature h4 {
+            color: var(--accent-gold);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tech-feature h4::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            display: inline-block;
+        }
+
+        .tech-feature p {
+            color: #cbd5e1;
+            padding-left: 40px;
+        }
+
+        /* ======================== 
+           7. TESTIMONIALS SECTION
+           ======================== */
+        #testimonials {
+            padding: 8rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .test-card {
+            background: var(--bg-white);
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .test-card:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            transform: translateY(-5px);
+        }
+
+        .test-card i.fa-quote-left {
+            font-size: 3rem;
+            color: rgba(201, 168, 76, 0.15);
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+        }
+
+        .test-card p.quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .test-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 1.5rem;
+        }
+
+        .test-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .test-author h5 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .test-author span {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* ======================== 
+           8. FAQ ACCORDION
+           ======================== */
+        #faq {
+            padding: 8rem 0;
+            background-color: var(--bg-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .accordion-header {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover {
+            color: var(--accent-gold);
+        }
+
+        .accordion-icon {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content p {
+            padding-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ======================== 
+           9. BOOKING FORM
+           ======================== */
+        #appointment {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            position: relative;
+        }
+
+        .booking-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 4rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary-navy);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+            background-color: var(--bg-light);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+            background-color: var(--bg-white);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+            font-weight: 500;
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+
+        .form-message.success {
+            background-color: #d1fae5;
+            color: #065f46;
+            display: block;
+            border-left: 4px solid #10b981;
+        }
+
+        .form-message.error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            display: block;
+            border-left: 4px solid #ef4444;
+        }
+
+        .error-text {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            display: none;
+        }
+
+        /* ======================== 
+           10. CONTACT & MAP
+           ======================== */
+        #contact {
+            padding: 0;
+            display: flex;
+        }
+
+        .contact-info {
+            width: 40%;
+            padding: 6rem 4rem;
+            background: var(--bg-white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h2 {
+            font-size: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-top: 0.2rem;
+        }
+
+        .info-item h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--primary-navy);
+        }
+
+        .info-item p {
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .info-item a {
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .info-item a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-actions .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.2rem;
+        }
+
+        .map-container {
+            width: 60%;
+            min-height: 500px;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .location-panel {
+            width: min(100%, 620px);
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 3rem;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.22);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--accent-gold);
+        }
+
+        .location-panel .map-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(201, 168, 76, 0.12);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-panel h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-panel p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .location-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .location-highlights span {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+
+        .location-highlights i {
+            color: var(--accent-gold);
+        }
+
+        /* ======================== 
+           11. FOOTER
+           ======================== */
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--bg-white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1.25fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-about p {
+            color: #cbd5e1;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-gold);
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: var(--bg-white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-gold);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a {
+            color: #cbd5e1;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .footer-contact p {
+            color: #cbd5e1;
+            margin-bottom: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-contact a {
+            color: #cbd5e1;
+            transition: var(--transition);
+        }
+
+        .footer-contact a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* ======================== 
+           FLOATING WHATSAPP
+           ======================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background-color: #20b858;
+            color: white;
+            box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ======================== 
+           RESPONSIVE DESIGN
+           ======================== */
+        @media (max-width: 1180px) {
+            .nav-links {
+                gap: 1.4rem;
+            }
+
+            .logo-name {
+                font-size: 1.75rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.58rem;
+            }
+
+            .hero-content {
+                grid-template-columns: minmax(0, 0.95fr) minmax(460px, 1.05fr);
+            }
+
+            .hero-trust-item {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-text h1 { font-size: 3.5rem; }
+            .hero-image {
+                min-height: 560px;
+            }
+
+            .hero-image img {
+                height: 560px;
+                min-height: 0;
+            }
+
+            .hero-trust-panel {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-trust-item:nth-child(3) {
+                border-left: 0;
+                border-top: 1px solid rgba(255,255,255,0.12);
+            }
+
+            .hero-trust-item:nth-child(4) {
+                border-top: 1px solid rgba(255,255,255,0.12);
+            }
+
+            .about-grid, .tech-grid { gap: 3rem; }
+            .contact-info { padding: 4rem 2rem; }
+        }
+
+        @media (max-width: 992px) {
+            #home {
+                padding: 8rem 0 2rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 2rem;
+            }
+
+            .hero-text {
+                max-width: 720px;
+                margin: 0 auto;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2.5rem;
+            }
+
+            .hero-text p::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero-buttons { justify-content: center; }
+
+            .hero-feature-grid {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image {
+                min-height: 0;
+                max-width: 780px;
+                margin: 1rem auto 0;
+            }
+
+            .hero-image::before {
+                display: none;
+            }
+
+            .hero-image img {
+                height: auto;
+                min-height: 0;
+                border-radius: 8px;
+                clip-path: polygon(7% 0, 100% 0, 100% 100%, 7% 100%, 0 58%);
+            }
+
+            .about-grid, .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image, .tech-image {
+                order: -1;
+            }
+
+            .doctor-portrait-3d {
+                transform: none;
+                max-width: 460px;
+            }
+
+            .doctor-portrait-3d:hover {
+                transform: translateY(-6px);
+            }
+
+            .tech-features {
+                padding-top: 2rem;
+            }
+
+            #contact {
+                flex-direction: column;
+            }
+
+            .contact-info, .map-container {
+                width: 100%;
+            }
+
+            .map-container {
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--primary-navy);
+                flex-direction: column;
+                justify-content: center;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .logo-mark {
+                width: 44px;
+                height: 44px;
+            }
+
+            .logo-mark i {
+                font-size: 1.65rem;
+            }
+
+            .logo-mark::before {
+                width: 12px;
+                height: 12px;
+                right: 8px;
+            }
+
+            .logo-mark::after {
+                width: 20px;
+                height: 28px;
+                border-left-width: 5px;
+                left: 7px;
+                top: 13px;
+            }
+
+            .logo-name {
+                font-size: 1.35rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.48rem;
+                letter-spacing: 0.35px;
+            }
+
+            #home {
+                padding-top: 7rem;
+            }
+
+            .hero-text .eyebrow {
+                font-size: 0.78rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .hero-feature-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .hero-feature i {
+                width: 64px;
+                height: 64px;
+                font-size: 1.55rem;
+            }
+
+            .hero-trust-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-trust-item,
+            .hero-trust-item:nth-child(3),
+            .hero-trust-item:nth-child(4) {
+                border-left: 0;
+                border-top: 1px solid rgba(255,255,255,0.12);
+            }
+
+            .hero-trust-item:first-child {
+                border-top: 0;
+            }
+
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-wrapper {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .contact-actions {
+                flex-direction: column;
+            }
+
+            .contact-actions .btn {
+                width: 100%;
+            }
+
+            .location-panel {
+                padding: 2.25rem 1.5rem;
+            }
+
+            .location-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-bar .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .doctor-portrait-3d {
+                --portrait-offset: 0.8rem;
+            }
+
+            .doctor-portrait-badge {
+                right: 1rem;
+                top: 1.4rem;
+                padding: 0.65rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .doctor-portrait-caption {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Sticky Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#home" class="logo site-logo" aria-label="Al-Falah Orthotics and Prosthetics Center">
+                <span class="logo-mark" aria-hidden="true">
+                    <i class="fas fa-person-running"></i>
+                </span>
+                <span class="logo-copy">
+                    <span class="logo-name">AL-FALAH</span>
+                    <span class="logo-subtitle">ORTHOTICS &amp; PROSTHETICS CENTER</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Our Work</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <a href="#appointment" class="btn btn-gold" style="padding: 0.6rem 1.5rem;">Book Appointment</a>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <span class="eyebrow">Advanced Prosthetics &amp; Orthotics</span>
+                    <h1>Restoring Mobility, <br><i>Transforming Lives.</i></h1>
+                    <p>Experience world-class prosthetic and orthotic care tailored to your unique lifestyle. We combine state-of-the-art technology with compassionate expertise to help you regain your independence and confidence.</p>
+                    <div class="hero-buttons">
+                        <a href="#appointment" class="btn btn-gold">Book Consultation <i class="far fa-calendar-days"></i></a>
+                        <a href="#services" class="btn btn-outline">Explore Services <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hero-feature-grid">
+                        <div class="hero-feature">
+                            <i class="fas fa-microscope"></i>
+                            <span>Advanced<br>Technology</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="fas fa-user-doctor"></i>
+                            <span>Expert<br>Technicians</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="fas fa-shield-heart"></i>
+                            <span>Custom<br>Solutions</span>
+                        </div>
+                        <div class="hero-feature">
+                            <i class="far fa-heart"></i>
+                            <span>Compassionate<br>Care</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image fade-in">
+                    <img src="assets/images/hero-prosthetics-showcase.png" alt="Advanced prosthetic and orthotic devices">
+                </div>
+            </div>
+            <div class="hero-trust-panel">
+                <div class="hero-trust-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h5>Board Certified</h5>
+                        <p>Excellence in Care</p>
+                    </div>
+                </div>
+                <div class="hero-trust-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h5>International Standards</h5>
+                        <p>Quality You Can Trust</p>
+                    </div>
+                </div>
+                <div class="hero-trust-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h5>Patient Focused</h5>
+                        <p>Your Goals, Our Priority</p>
+                    </div>
+                </div>
+                <div class="hero-trust-item">
+                    <i class="fas fa-shield-heart"></i>
+                    <div>
+                        <h5>Proven Results</h5>
+                        <p>Restoring Lives Every Day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 4. About Dr. Asif -->
+    <section id="about" class="container fade-in">
+        <div class="about-grid">
+            <div class="about-image">
+                <figure class="doctor-portrait-3d">
+                    <div class="doctor-portrait-frame">
+                        <img src="assets/images/asif.png" alt="Dr. Asif Ali - Medical Professional">
+                    </div>
+                    <figcaption class="doctor-portrait-caption">
+                        <strong>Dr. Asif Ali</strong>
+                        <span>Medical Professional</span>
+                    </figcaption>
+                    <div class="doctor-portrait-badge" aria-label="Prosthetics and orthotics specialist">
+                        <i class="fas fa-user-md"></i>
+                        <span>Specialist</span>
+                    </div>
+                </figure>
+            </div>
+            <div class="about-text">
+                <span class="eyebrow">About the Specialist</span>
+                <h2>Dr. Asif Ali</h2>
+                <p>With over 15 years of dedicated experience in orthotics and prosthetics, Dr. Asif Ali is a pioneer in integrating bionic technology with structural rehabilitation. His patient-first approach ensures that every solution is customized not just for fit, but for your specific lifestyle and goals.</p>
+                <p>He strongly believes in empowering individuals by bridging the gap between advanced medical engineering and human potential, providing care that goes beyond the clinic doors.</p>
+                
+                <div class="qualifications-grid">
+                    <div class="qual-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h5>M.Sc. Prosthetics</h5>
+                            <p>Advanced Biomechanics</p>
+                        </div>
+                    </div>
+                    <div class="qual-item">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <h5>Global Fellow</h5>
+                            <p>Bionic Integration</p>
+                        </div>
+                    </div>
+                    <div class="qual-item">
+                        <i class="fas fa-microscope"></i>
+                        <div>
+                            <h5>Lead Researcher</h5>
+                            <p>Adaptive Orthotics</p>
+                        </div>
+                    </div>
+                    <div class="qual-item">
+                        <i class="fas fa-hospital-user"></i>
+                        <div>
+                            <h5>Clinical Director</h5>
+                            <p>Rehab Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Services Section -->
+    <section id="services" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Clinical Expertise</span>
+                <h2>Comprehensive Care Solutions</h2>
+                <p>We provide advanced, customized solutions designed to restore function and improve your quality of life.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-walking"></i></div>
+                    <h3>Lower Limb Prosthetics</h3>
+                    <p>Custom-fabricated prostheses utilizing advanced socket technology and microprocessor knees for a natural, dynamic gait.</p>
+                    <a href="#appointment" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hand-paper"></i></div>
+                    <h3>Upper Extremity Bionics</h3>
+                    <p>Myoelectric and bionic hand systems offering multi-articulating fingers and proportional control for complex tasks.</p>
+                    <a href="#appointment" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bone"></i></div>
+                    <h3>Structural Orthotics</h3>
+                    <p>Precision-engineered braces and supports to correct alignment, relieve pain, and provide essential structural stability.</p>
+                    <a href="#appointment" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Active Rehabilitation</h3>
+                    <p>Comprehensive physical therapy protocols integrated with prosthetic training to maximize your function and confidence.</p>
+                    <a href="#appointment" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Technology & Innovation Section -->
+    <section id="technology" class="fade-in">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-features">
+                    <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                        <span class="eyebrow">Innovation</span>
+                        <h2>Next-Generation Technology</h2>
+                        <p>We utilize the latest advancements in scanning, modeling, and materials to ensure an impeccable fit and superior performance.</p>
+                    </div>
+                    
+                    <div class="tech-feature">
+                        <h4>3D Laser Scanning</h4>
+                        <p>Sub-millimeter accuracy capturing your unique anatomy without the mess of traditional plaster casting, ensuring a flawless socket fit.</p>
+                    </div>
+                    
+                    <div class="tech-feature">
+                        <h4>Bionic Integration</h4>
+                        <p>Microprocessor-controlled joints that adapt to your walking speed and terrain in real-time, preventing stumbles and reducing fatigue.</p>
+                    </div>
+                    
+                    <div class="tech-feature">
+                        <h4>Carbon Fiber Composites</h4>
+                        <p>Aerospace-grade materials providing maximum strength with minimal weight for an energy-returning, dynamic response.</p>
+                    </div>
+                </div>
+                <div class="tech-image">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="3D Scanning Technology and Bionics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Testimonials Section -->
+    <section id="testimonials" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Patient Stories</span>
+                <h2>Lives Transformed</h2>
+                <p>Hear from those who have regained their independence and mobility through our customized care plans.</p>
+            </div>
+            
+            <div class="test-grid">
+                <div class="test-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="quote">"After losing my leg, I thought my active lifestyle was over. Dr. Asif and his team fitted me with a microprocessor knee that let me hike again. Truly life-changing."</p>
+                    <div class="test-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael T.">
+                        <div>
+                            <h5>Michael T.</h5>
+                            <span>Below-Knee Patient</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="quote">"The bionic arm I received has given me back the ability to perform delicate tasks. The team's dedication to getting the fit absolutely perfect was remarkable."</p>
+                    <div class="test-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah J.">
+                        <div>
+                            <h5>Sarah J.</h5>
+                            <span>Bionic Arm Patient</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="quote">"My son's severe scoliosis was treated with a custom 3D-printed brace. It's lightweight, comfortable, and has significantly corrected his posture in just 6 months."</p>
+                    <div class="test-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="David W.">
+                        <div>
+                            <h5>David W.</h5>
+                            <span>Orthotics Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ Accordion Section -->
+    <section id="faq" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Knowledge Base</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about prosthetics care, the fitting process, and rehabilitation.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How long does the fitting process typically take?
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>The process typically takes 3 to 6 weeks from initial consultation to final delivery. This includes 3D scanning, diagnostic socket fitting, dynamic alignment, and final fabrication. Complex bionic systems may take slightly longer.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Will my insurance cover the cost of a prosthesis?
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Most health insurance plans cover a significant portion of prosthetics and orthotics. Our administrative team will handle all prior authorizations and work directly with your provider to maximize your benefits and minimize out-of-pocket costs.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How soon after amputation can I be fitted?
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Generally, a temporary or preparatory prosthesis can be fitted 3 to 6 weeks post-surgery, once the surgical site is fully healed and swelling has subsided. We work closely with your surgeon to determine the optimal timeline.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Does rehabilitation training come with the prosthesis?
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes. Proper training is crucial for success. We provide integrated gait training and active rehabilitation sessions. We also coordinate with your physical or occupational therapist to ensure a comprehensive recovery plan.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How long will my prosthetic limb last?
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>A prosthetic socket typically lasts 1 to 3 years depending on changes in your residual limb's volume and shape. The mechanical components (feet, knees, hands) generally last 3 to 5 years under normal wear and tear.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Can I shower or swim with my prosthesis?
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Standard prostheses are usually not waterproof. However, we can design specialized "water legs" specifically for showering, swimming, or beach activities using non-corrosive materials and waterproof components.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Appointment Booking Form -->
+    <section id="appointment" class="fade-in">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="section-header" style="margin-bottom: 2.5rem;">
+                    <span class="eyebrow">Take the First Step</span>
+                    <h2>Book a Consultation</h2>
+                    <p style="color: var(--text-light); margin-top: 10px;">Share your details and our Al-Falah Center team will receive your appointment request directly on WhatsApp.</p>
+                </div>
+
+                <form id="bookingForm" class="booking-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Your full name">
+                        <div class="error-text" id="nameError">Please enter your full name.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="0300-0000000">
+                        <div class="error-text" id="phoneError">Please enter a valid phone number.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Optional">
+                        <div class="error-text" id="emailError">Please enter a valid email address or leave it blank.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Type *</label>
+                        <select id="service" class="form-control">
+                            <option value="">Select a service...</option>
+                            <option value="Lower Limb Prosthetics">Lower Limb Prosthetics</option>
+                            <option value="Upper Extremity Bionics">Upper Extremity Bionics</option>
+                            <option value="Structural Orthotics">Structural Orthotics</option>
+                            <option value="Rehabilitation">Rehabilitation</option>
+                        </select>
+                        <div class="error-text" id="serviceError">Please select a service type.</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" class="form-control">
+                        <div class="error-text" id="dateError">Please select a preferred date.</div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" class="form-control" placeholder="Briefly describe your condition or requirements..."></textarea>
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 1.5rem; text-align: center;">
+                        <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.15rem; padding: 1.2rem;">Send on WhatsApp</button>
+                    </div>
+
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Contact & Map -->
+    <section id="contact" class="fade-in">
+        <div class="contact-info">
+            <span class="eyebrow" style="margin-bottom: 1rem;">Reach Out</span>
+            <h2 style="color: var(--primary-navy);">Al-Falah Artificial Limbs Center</h2>
+            
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Address</h4>
+                    <p>Bahawalpur Bypass Chowk,<br>Muzaffargarh Road,<br>near Zakria Hospital, beside DHA Hospital</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Phone</h4>
+                    <p>
+                        <a href="tel:+923027729246">0302-7729246</a><br>
+                        <a href="tel:+923336146882">0333-6146882</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <h4>WhatsApp</h4>
+                    <p>
+                        <a href="https://wa.me/923027729246" target="_blank" rel="noopener noreferrer">0302-7729246</a><br>
+                        <a href="https://wa.me/923336146882" target="_blank" rel="noopener noreferrer">0333-6146882</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Operating Hours</h4>
+                    <p>Monday - Saturday: By Appointment<br>Call or WhatsApp before visiting</p>
+                </div>
+            </div>
+
+            <div class="contact-actions">
+                <a href="tel:+923027729246" class="btn btn-gold"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/923027729246" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div class="location-panel">
+                <div class="map-icon">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+                <span class="eyebrow">Clinic Address</span>
+                <h3>Visit Al-Falah Center</h3>
+                <p>Bahawalpur Bypass Chowk, Muzaffargarh Road, near Zakria Hospital, beside DHA Hospital.</p>
+                <div class="location-highlights">
+                    <span><i class="fas fa-road"></i> Muzaffargarh Road</span>
+                    <span><i class="fas fa-hospital"></i> Near Hospitals</span>
+                    <span><i class="fab fa-whatsapp"></i> WhatsApp Booking</span>
+                    <span><i class="fas fa-user-md"></i> Dr. Asif Ali</span>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bahawalpur%20Bypass%20Chowk%20Muzaffargarh%20Road%20Zakria%20Hospital%20DHA%20Hospital" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-map-location-dot"></i> Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#home" class="logo">
+                        Al-Falah <span>Center</span>
+                    </a>
+                    <p>Al-Falah Artificial Limbs Center provides prosthetics, orthotics, rehabilitation support, and personalized mobility solutions under the care of Dr. Asif Ali.</p>
+                    <div class="social-icons">
+                        <a href="https://wa.me/923027729246" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Al-Falah Center"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+923027729246" aria-label="Call Al-Falah Center"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Bahawalpur%20Bypass%20Chowk%20Muzaffargarh%20Road%20Zakria%20Hospital%20DHA%20Hospital" target="_blank" rel="noopener noreferrer" aria-label="Open Al-Falah Center location"><i class="fas fa-location-dot"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Dr. Asif</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#testimonials">Patient Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Patient Support</h4>
+                    <ul>
+                        <li><a href="#appointment">Book Appointment</a></li>
+                        <li><a href="tel:+923027729246">Call 0302-7729246</a></li>
+                        <li><a href="https://wa.me/923336146882" target="_blank" rel="noopener noreferrer">WhatsApp 0333-6146882</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links footer-contact">
+                    <h4>Visit Us</h4>
+                    <p>Bahawalpur Bypass Chowk, Muzaffargarh Road, near Zakria Hospital, beside DHA Hospital.</p>
+                    <p><a href="tel:+923027729246">0302-7729246</a><br><a href="tel:+923336146882">0333-6146882</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Al-Falah Artificial Limbs Center - Dr. Asif Ali. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923027729246" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Al-Falah Center on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Embedded Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Hamburger Menu Toggle (Mobile Responsive)
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const navItems = document.querySelectorAll('.nav-links a');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = hamburger.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = hamburger.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // 2. Sticky Navbar background on scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                    navbar.style.padding = '0.8rem 0';
+                } else {
+                    navbar.style.boxShadow = 'none';
+                    navbar.style.padding = '1rem 0';
+                }
+            });
+
+            // 3. Smooth Scroll Animations via IntersectionObserver
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // 4. FAQ Accordion Logic (Pure JS)
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const content = header.nextElementSibling;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // 5. Booking Form Validation Logic (Vanilla JS)
+            const bookingForm = document.getElementById('bookingForm');
+            
+            // Set minimum date for appointment to today
+            const dateInput = document.getElementById('date');
+            if(dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+            }
+            
+            if(bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    let isValid = true;
+                    
+                    // Get fields
+                    const name = document.getElementById('fullName');
+                    const phone = document.getElementById('phone');
+                    const email = document.getElementById('email');
+                    const service = document.getElementById('service');
+                    const date = document.getElementById('date');
+                    const message = document.getElementById('message');
+                    
+                    // Regex patterns
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    const phonePattern = /^\+?[\d\s\-\(\)]{7,15}$/;
+                    
+                    // Hide all errors initially
+                    document.querySelectorAll('.error-text').forEach(el => el.style.display = 'none');
+                    document.querySelectorAll('.form-control').forEach(el => el.style.borderColor = '#cbd5e1');
+                    
+                    // Validate Name
+                    if (name.value.trim() === '') {
+                        showError('nameError', name);
+                        isValid = false;
+                    }
+                    
+                    // Validate Phone
+                    if (!phonePattern.test(phone.value.trim())) {
+                        showError('phoneError', phone);
+                        isValid = false;
+                    }
+                    
+                    // Validate Email when provided
+                    if (email.value.trim() !== '' && !emailPattern.test(email.value.trim())) {
+                        showError('emailError', email);
+                        isValid = false;
+                    }
+                    
+                    // Validate Service
+                    if (service.value === '') {
+                        showError('serviceError', service);
+                        isValid = false;
+                    }
+                    
+                    // Validate Date
+                    if (date.value === '') {
+                        showError('dateError', date);
+                        isValid = false;
+                    }
+                    
+                    const formMessage = document.getElementById('formMessage');
+                    
+                    if (isValid) {
+                        const btn = bookingForm.querySelector('button[type="submit"]');
+                        btn.innerHTML = '<i class="fab fa-whatsapp"></i> Opening WhatsApp...';
+
+                        const appointmentText = [
+                            'Appointment Request - Al-Falah Artificial Limbs Center',
+                            `Name: ${name.value.trim()}`,
+                            `Phone: ${phone.value.trim()}`,
+                            email.value.trim() ? `Email: ${email.value.trim()}` : null,
+                            `Service: ${service.value}`,
+                            `Preferred Date: ${date.value}`,
+                            message.value.trim() ? `Message: ${message.value.trim()}` : null
+                        ].filter(Boolean).join('\n');
+
+                        const whatsappUrl = `https://wa.me/923027729246?text=${encodeURIComponent(appointmentText)}`;
+                        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+                        formMessage.textContent = 'Your appointment details are ready in WhatsApp. Please press send there to confirm.';
+                        formMessage.className = 'form-message success';
+                        bookingForm.reset();
+                        btn.innerHTML = 'Send on WhatsApp';
+                    } else {
+                        formMessage.textContent = 'Please fix the errors in the form before submitting.';
+                        formMessage.className = 'form-message error';
+                    }
+                });
+            }
+            
+            function showError(errorId, inputElement) {
+                document.getElementById(errorId).style.display = 'block';
+                inputElement.style.borderColor = '#ef4444';
+            }
+        });
+    </script>
+</body>
+</html>
