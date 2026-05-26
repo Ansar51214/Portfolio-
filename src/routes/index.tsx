@@ -18,6 +18,8 @@ const CONTACT_EMAIL = "ansarabbas140@gmail.com";
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
 const GITHUB_URL = "https://github.com/Ansar51214";
 const LINKEDIN_URL = "https://www.linkedin.com/in/ansar-abbas-awan";
+const ABU_BAKAR_PORTFOLIO_URL = "https://ansar51214.github.io/abu-bakar-shah-portfolio/";
+const ABU_BAKAR_SOURCE_URL = "https://github.com/Ansar51214/abu-bakar-shah-portfolio";
 const WHATSAPP_URL =
   "https://wa.me/923277336712?text=" +
   encodeURIComponent("Hi, I visited your portfolio and want to contact you");
@@ -546,6 +548,38 @@ function Index() {
           <div className="project-card">
             <div className="status-badge live">Workflow</div>
             <div className="project-num">03</div>
+            <h3>Education Leader Portfolio</h3>
+            <p>
+              Created a professional portfolio for Muhammad Abu Bakar Siddique Shah, presenting
+              public-sector education leadership, literacy impact, achievements, initiatives, media,
+              and office contact details in a polished single-page experience.
+            </p>
+            <div className="project-footer">
+              <span className="tech-stack">HTML / CSS / GitHub Pages</span>
+              <div className="project-actions">
+                <a
+                  href={ABU_BAKAR_PORTFOLIO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-btn"
+                >
+                  Live Preview
+                </a>
+                <a
+                  href={ABU_BAKAR_SOURCE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-btn ghost"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="status-badge live">Workflow</div>
+            <div className="project-num">04</div>
             <h3>Automation Workflow Systems</h3>
             <p>
               Client-ready automation concepts for lead capture, follow-up reminders, form
