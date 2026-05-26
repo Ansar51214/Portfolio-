@@ -73,22 +73,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Ansar Abbas – Portfolio" },
-      { name: "description", content: "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience." },
+      {
+        name: "description",
+        content:
+          "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience.",
+      },
       { name: "author", content: "Ansar Abbas" },
       { property: "og:title", content: "Ansar Abbas – Portfolio" },
-      { property: "og:description", content: "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience." },
+      {
+        property: "og:description",
+        content:
+          "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Ansar Abbas – Portfolio" },
-      { name: "twitter:description", content: "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7884ef39-be41-4a61-a18a-01d4dbeb5eed/id-preview-7390aaf0--f702d296-67f5-4787-aafe-66a752628997.lovable.app-1778423493632.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7884ef39-be41-4a61-a18a-01d4dbeb5eed/id-preview-7390aaf0--f702d296-67f5-4787-aafe-66a752628997.lovable.app-1778423493632.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7884ef39-be41-4a61-a18a-01d4dbeb5eed/id-preview-7390aaf0--f702d296-67f5-4787-aafe-66a752628997.lovable.app-1778423493632.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7884ef39-be41-4a61-a18a-01d4dbeb5eed/id-preview-7390aaf0--f702d296-67f5-4787-aafe-66a752628997.lovable.app-1778423493632.png",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap",
+      },
       { rel: "stylesheet", href: appCss },
     ],
   }),
