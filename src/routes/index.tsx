@@ -22,7 +22,7 @@ const ABU_BAKAR_PORTFOLIO_URL = "https://ansar51214.github.io/abu-bakar-shah-por
 const ABU_BAKAR_SOURCE_URL = "https://github.com/Ansar51214/abu-bakar-shah-portfolio";
 const WHATSAPP_URL =
   "https://wa.me/923277336712?text=" +
-  encodeURIComponent("Hi, I visited your portfolio and want to contact you");
+  encodeURIComponent("Hi Ansar, I visited your portfolio and would like to discuss a project.");
 
 const navLinks = [
   { href: "#hero", label: "Home" },
@@ -36,83 +36,83 @@ const skills = [
   {
     num: "01",
     title: "Web Development",
-    desc: "Full-stack websites, college portals, and modern web solutions with 5 years of hands-on experience.",
-    years: "5 years",
-    width: "85%",
+    desc: "Full-stack and institutional websites — college portals, CMS builds, and polished front-ends with production-ready delivery.",
+    years: "5+ years",
+    width: "88%",
     green: false,
   },
   {
     num: "02",
-    title: "AI-Assisted Web Development",
-    desc: "AI-assisted rapid development via Lovable and Antigravity, focused on polished, production-ready websites.",
-    years: "1 year",
-    width: "60%",
+    title: "AI-Assisted Development",
+    desc: "Rapid, high-quality shipping with modern AI tooling (Lovable, Claude, Replit) while keeping structure, performance, and handoff clean.",
+    years: "1+ year",
+    width: "65%",
     green: false,
   },
   {
     num: "03",
     title: "Digital Marketing",
-    desc: "SEO, content strategy, paid campaigns, and growth marketing for measurable online results.",
+    desc: "SEO foundations, content strategy, and paid campaigns focused on measurable visibility and lead quality — not vanity metrics.",
     years: "2 years",
-    width: "70%",
+    width: "72%",
     green: true,
   },
   {
     num: "04",
     title: "n8n Automation",
-    desc: "Workflow automation, API integrations, and no-code pipelines to streamline business operations.",
-    years: "6 months",
-    width: "45%",
+    desc: "Workflow automation, webhooks, and API integrations that cut repetitive admin and keep follow-ups reliable.",
+    years: "6+ months",
+    width: "50%",
     green: false,
   },
   {
     num: "05",
     title: "Education & Training",
-    desc: "9 years teaching computer science with an MSCS degree, clear communication, mentoring, and training.",
+    desc: "Nine years teaching computer science (MSCS). Clear communication, mentoring, and systems that serve students and staff.",
     years: "9 years",
     width: "95%",
     green: true,
   },
   {
     num: "06",
-    title: "Replit Development",
-    desc: "Cloud-based coding and rapid prototyping on Replit, building and deploying apps directly in the browser.",
+    title: "Rapid Prototyping",
+    desc: "Browser-based builds and fast iterations on Replit and modern stacks — from concept screens to deployable demos.",
     years: "Active",
-    width: "55%",
+    width: "58%",
     green: false,
   },
 ];
 
 const experience = [
   {
-    year: "2024 - Present",
-    title: "AI-Assisted Web Development",
-    desc: "Building production-ready websites rapidly using AI tools, from concept to deployment with Lovable, Antigravity, and Replit.",
-    tags: ["Lovable", "Antigravity", "Replit", "Claude"],
+    year: "2024 – Present",
+    title: "Freelance Web & AI-Assisted Builds",
+    desc: "Delivering client and institutional sites from brief to deploy — modern UI, solid structure, and practical handoff using Lovable, Claude, and production workflows.",
+    tags: ["Lovable", "Claude", "Replit", "Client delivery"],
   },
   {
-    year: "2024 - Present",
-    title: "n8n Automation Specialist",
-    desc: "Designing automated workflows using n8n, connecting apps, triggering smart actions, and eliminating repetitive work.",
-    tags: ["n8n", "API Integration", "No-code"],
+    year: "2024 – Present",
+    title: "Automation Specialist (n8n)",
+    desc: "Designing lead capture, notifications, and app-to-app pipelines so teams spend less time on repetitive tasks and more on core work.",
+    tags: ["n8n", "APIs", "Webhooks", "No-code"],
   },
   {
-    year: "2022 - 2024",
+    year: "2022 – 2024",
     title: "Digital Marketing",
-    desc: "Managed full-cycle digital campaigns across SEO, content creation, social media, and paid advertising for measurable client growth.",
-    tags: ["SEO", "Content", "Paid Ads"],
+    desc: "Full-cycle campaigns: SEO, content, social, and paid ads aimed at growth you can track — traffic, inquiries, and clarity of offer.",
+    tags: ["SEO", "Content", "Paid ads"],
   },
   {
-    year: "2019 - Present",
+    year: "2019 – Present",
     title: "Web Developer",
-    desc: "5+ years building web projects, including a complete college website, with front-end and back-end implementation experience.",
-    tags: ["HTML/CSS", "JavaScript", "CMS"],
+    desc: "Five-plus years building web projects including a complete college management experience — public pages, campus content, and role-based portal screens.",
+    tags: ["HTML/CSS", "JavaScript", "CMS", "Institutions"],
   },
   {
-    year: "2015 - Present",
-    title: "Educator & Lecturer",
-    desc: "9 years of teaching experience with an MSCS qualification, specializing in computer science and technology education.",
-    tags: ["MSCS", "Computer Science", "9 Years"],
+    year: "2015 – Present",
+    title: "Educator & Lecturer (MSCS)",
+    desc: "Nine years teaching computer science and technology — curriculum delivery, mentoring, and the discipline to explain complex systems simply.",
+    tags: ["MSCS", "Computer science", "Mentoring"],
   },
 ];
 
@@ -145,7 +145,7 @@ function Index() {
       return;
     }
     if (!WEB3FORMS_ACCESS_KEY) {
-      setCfError("Contact form is not configured yet. Please email me directly.");
+      setCfError("Contact form is not configured yet. Please email or WhatsApp me directly.");
       return;
     }
 
@@ -159,6 +159,7 @@ function Index() {
           name,
           email,
           message,
+          subject: `Portfolio inquiry from ${name}`,
         }),
       });
       if (!res.ok) throw new Error("Request failed");
@@ -169,7 +170,7 @@ function Index() {
       setTimeout(() => setCfStatus("idle"), 5000);
     } catch {
       setCfStatus("error");
-      setCfError("Something went wrong. Please try again.");
+      setCfError("Something went wrong. Please try again or use WhatsApp.");
     }
   };
 
@@ -357,16 +358,15 @@ function Index() {
         <div className="hero-grid">
           <div className="hero-inner">
             <div className="hero-badge">
-              <div className="badge-dot"></div>Available for Freelance Projects
+              <div className="badge-dot"></div>Available for freelance & institutional projects
             </div>
             <h1 className="hero-name">
               <span className="name-line">Ansar</span>
               <em className="name-line">Abbas</em>
             </h1>
             <p className="hero-tagline">
-              I help businesses, colleges, and professionals build modern websites, management
-              systems, and smart automation workflows that improve online presence, save time, and
-              generate better results.
+              I help colleges, businesses, and professionals ship modern websites, management systems,
+              and smart automation — clearer online presence, less admin work, and results you can measure.
             </p>
             <div className="hero-stats">
               <div className="stat-item">
@@ -397,22 +397,30 @@ function Index() {
             </div>
             <div className="hero-cta">
               <a href="#projects" className="btn-primary">
-                View Projects
+                View case studies
               </a>
               <a href="#contact" className="btn-outline">
-                Contact Me
+                Start a project
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                WhatsApp
               </a>
             </div>
           </div>
           <div className="hero-photo">
-            <img src={portrait} alt="Portrait of Ansar Abbas" />
+            <img src={portrait} alt="Professional portrait of Ansar Abbas" />
           </div>
         </div>
       </section>
 
       <section id="skills" className="reveal">
         <div className="section-label">Expertise</div>
-        <h2 className="section-title">Skills & Tools</h2>
+        <h2 className="section-title">Skills & tools</h2>
         <div className="skills-grid">
           {skills.map((s) => (
             <div className="skill-card" key={s.num}>
@@ -457,11 +465,11 @@ function Index() {
 
       <section id="projects" className="reveal">
         <div className="section-label">Work</div>
-        <h2 className="section-title">Featured Case Studies</h2>
+        <h2 className="section-title">Featured case studies</h2>
         <div className="projects-grid">
           <div className="project-card featured has-preview">
-            <div className="featured-badge red">Case Study</div>
-            <div className="project-mockup" aria-label="College Website preview">
+            <div className="featured-badge red">Case study</div>
+            <div className="project-mockup" aria-label="College website preview">
               <div className="mockup-bar">
                 <span className="mockup-dot red" />
                 <span className="mockup-dot yellow" />
@@ -496,16 +504,17 @@ function Index() {
               </div>
             </div>
             <div className="project-num">01</div>
-            <h3>College Management Website</h3>
+            <h3>College management website</h3>
             <p>
-              Designed a complete institutional web experience with admissions, departments, faculty
-              profiles, campus pages, and portal screens for administrators, students, and teachers.
+              End-to-end institutional web experience: admissions and departments, faculty and campus
+              pages, plus portal-style screens for administrators, students, and teachers — built for
+              clarity and day-to-day use, not just a brochure site.
             </p>
             <div className="project-footer">
-              <span className="tech-stack">HTML / CSS / CMS</span>
+              <span className="tech-stack">HTML / CSS / CMS · Institutional</span>
               <div className="project-actions">
                 <a href="#contact" className="project-btn">
-                  Live Preview
+                  Request walkthrough
                 </a>
                 <a
                   href={GITHUB_URL}
@@ -513,49 +522,49 @@ function Index() {
                   rel="noopener noreferrer"
                   className="project-btn ghost"
                 >
-                  Source Code
+                  GitHub
                 </a>
               </div>
             </div>
           </div>
 
           <div className="project-card">
-            <div className="status-badge live">Live Case</div>
+            <div className="status-badge live">Live</div>
             <div className="project-num">02</div>
-            <h3>Portfolio Website</h3>
+            <h3>Personal portfolio (this site)</h3>
             <p>
-              Built a conversion-focused personal portfolio with responsive sections, a contact
-              workflow, social links, and a refined futuristic glass interface for client discovery.
+              Conversion-focused personal brand site: clear offer, case studies, contact workflow,
+              and a refined glass interface so clients and recruiters can evaluate work in one scroll.
             </p>
             <div className="project-footer">
-              <span className="tech-stack">Lovable / Antigravity / Claude</span>
+              <span className="tech-stack">React · TanStack · Vite</span>
               <div className="project-actions">
                 <a href="#hero" className="project-btn">
-                  Live Preview
+                  You are here
                 </a>
                 <a
-                  href={GITHUB_URL}
+                  href={`${GITHUB_URL}/Portfolio-`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-btn ghost"
                 >
-                  Source Code
+                  Source
                 </a>
               </div>
             </div>
           </div>
 
           <div className="project-card">
-            <div className="status-badge live">Workflow</div>
+            <div className="status-badge live">Client live</div>
             <div className="project-num">03</div>
-            <h3>Education Leader Portfolio</h3>
+            <h3>Education leader portfolio</h3>
             <p>
-              Created a professional portfolio for Muhammad Abu Bakar Siddique Shah, presenting
-              public-sector education leadership, literacy impact, achievements, initiatives, media,
-              and office contact details in a polished single-page experience.
+              Professional site for Muhammad Abu Bakar Siddique Shah — public-sector education
+              leadership, literacy impact, initiatives, media, and official contact in a polished
+              single-page experience.
             </p>
             <div className="project-footer">
-              <span className="tech-stack">HTML / CSS / GitHub Pages</span>
+              <span className="tech-stack">HTML / CSS · GitHub Pages</span>
               <div className="project-actions">
                 <a
                   href={ABU_BAKAR_PORTFOLIO_URL}
@@ -563,7 +572,7 @@ function Index() {
                   rel="noopener noreferrer"
                   className="project-btn"
                 >
-                  Live Preview
+                  Live site
                 </a>
                 <a
                   href={ABU_BAKAR_SOURCE_URL}
@@ -571,25 +580,25 @@ function Index() {
                   rel="noopener noreferrer"
                   className="project-btn ghost"
                 >
-                  Source Code
+                  Source
                 </a>
               </div>
             </div>
           </div>
 
           <div className="project-card">
-            <div className="status-badge live">Workflow</div>
+            <div className="status-badge live">Workflows</div>
             <div className="project-num">04</div>
-            <h3>Automation Workflow Systems</h3>
+            <h3>Automation workflow systems</h3>
             <p>
-              Client-ready automation concepts for lead capture, follow-up reminders, form
-              notifications, and app-to-app workflows that reduce manual admin work.
+              Practical automation concepts for lead capture, follow-up reminders, form alerts, and
+              app-to-app flows — designed to reduce manual admin without locking teams into rigid tools.
             </p>
             <div className="project-footer">
-              <span className="tech-stack">n8n / APIs / Webhooks</span>
+              <span className="tech-stack">n8n · APIs · Webhooks</span>
               <div className="project-actions">
                 <a href="#contact" className="project-btn">
-                  Live Preview
+                  Discuss automation
                 </a>
                 <a
                   href={GITHUB_URL}
@@ -597,7 +606,7 @@ function Index() {
                   rel="noopener noreferrer"
                   className="project-btn ghost"
                 >
-                  Source Code
+                  GitHub
                 </a>
               </div>
             </div>
@@ -606,12 +615,15 @@ function Index() {
       </section>
 
       <section id="contact" className="reveal">
-        <div className="section-label">Let's Connect</div>
-        <h2 className="section-title">Get in Touch</h2>
+        <div className="section-label">Let's connect</div>
+        <h2 className="section-title">Get in touch</h2>
         <div className="contact-inner">
           <div className="contact-wrap">
-            <h2>Ready to build something great?</h2>
-            <p>Website, automation, or digital marketing - let's talk and make it happen.</p>
+            <h2>Ready to build something solid?</h2>
+            <p>
+              Website, college system, marketing support, or automation — tell me the goal and I'll
+              reply with a clear next step.
+            </p>
             <a href={`mailto:${CONTACT_EMAIL}`} className="contact-email">
               {CONTACT_EMAIL}
             </a>
@@ -625,6 +637,7 @@ function Index() {
                   onChange={(e) => setCfName(e.target.value)}
                   maxLength={100}
                   required
+                  autoComplete="name"
                 />
                 <label htmlFor="cf-name">Your name</label>
               </div>
@@ -637,6 +650,7 @@ function Index() {
                   onChange={(e) => setCfEmail(e.target.value)}
                   maxLength={255}
                   required
+                  autoComplete="email"
                 />
                 <label htmlFor="cf-email">Email address</label>
               </div>
@@ -649,7 +663,7 @@ function Index() {
                   maxLength={2000}
                   required
                 />
-                <label htmlFor="cf-msg">Your message</label>
+                <label htmlFor="cf-msg">Project details or message</label>
               </div>
               {cfError && (
                 <div className="form-error" role="alert">
@@ -658,12 +672,12 @@ function Index() {
               )}
               {cfStatus === "success" && (
                 <div className="form-success" role="status">
-                  Message sent successfully
+                  Message sent — I'll get back to you soon.
                 </div>
               )}
               <div className="form-actions">
                 <button type="submit" className="btn-neon" disabled={cfStatus === "loading"}>
-                  {cfStatus === "loading" ? "Sending..." : "Send Message"}
+                  {cfStatus === "loading" ? "Sending..." : "Send message"}
                 </button>
                 <a
                   href={WHATSAPP_URL}
@@ -671,7 +685,7 @@ function Index() {
                   rel="noopener noreferrer"
                   className="btn-whatsapp"
                 >
-                  Contact on WhatsApp
+                  WhatsApp
                 </a>
               </div>
             </form>
@@ -709,8 +723,8 @@ function Index() {
       </section>
 
       <footer>
-        <span>&copy; {new Date().getFullYear()} Ansar Abbas</span>
-        <span>MSCS / Web Dev / Digital Marketing / Automation</span>
+        <span>&copy; {new Date().getFullYear()} Ansar Abbas · All rights reserved</span>
+        <span>MSCS · Web · Marketing · Automation</span>
       </footer>
     </div>
   );
