@@ -67,33 +67,27 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const siteTitle = "Ansar Abbas — Web Developer, Digital Marketing & Automation";
+const siteDescription =
+  "Ansar Abbas — MSCS educator and freelance specialist in modern websites, college systems, digital marketing, and n8n automation. 5+ years web development, 9 years teaching.";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ansar Abbas – Portfolio" },
-      {
-        name: "description",
-        content:
-          "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience.",
-      },
+      { title: siteTitle },
+      { name: "description", content: siteDescription },
       { name: "author", content: "Ansar Abbas" },
-      { property: "og:title", content: "Ansar Abbas – Portfolio" },
-      {
-        property: "og:description",
-        content:
-          "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience.",
-      },
+      { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: "#06070d" },
+      { property: "og:title", content: siteTitle },
+      { property: "og:description", content: siteDescription },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Ansar Abbas – Portfolio" },
-      {
-        name: "twitter:description",
-        content:
-          "Ansar Abbas — Web Developer, Digital Marketer, and AI Automation Expert. MSCS qualified with 9 years teaching experience.",
-      },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: siteTitle },
+      { name: "twitter:description", content: siteDescription },
       {
         property: "og:image",
         content:
@@ -113,6 +107,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap",
       },
       { rel: "stylesheet", href: appCss },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Ansar Abbas",
+          jobTitle: "Web Developer & Digital Marketing Specialist",
+          description: siteDescription,
+          email: "ansarabbas140@gmail.com",
+          url: "https://github.com/Ansar51214",
+          sameAs: [
+            "https://www.linkedin.com/in/ansar-abbas-awan",
+            "https://github.com/Ansar51214",
+            "https://web.facebook.com/ansar.abbas.5283/",
+          ],
+          knowsAbout: [
+            "Web Development",
+            "Digital Marketing",
+            "n8n Automation",
+            "Education Technology",
+            "College Management Systems",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
